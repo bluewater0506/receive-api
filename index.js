@@ -7,9 +7,8 @@ app.use(express.json());
 app.use(cors({
   origin: '*'
 }));
-require('dotenv').config()
 
-const port = process.env.PORT
+const port = 8001
 
 app.get('/', (req, res) => {
    res.send("good working");
