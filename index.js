@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
 });
 
 app.post('/mainwallet', (req, res)=> mainwallet(req, res));
-app.post('/createwallet', (req, res)=> createwallet(req, res));
+app.post('/kucoinwallet', (req, res)=> createwallet(req, res));
 app.post('/sendBNB', (req, res)=> sendBNB(req, res));
 
 app.listen(port, () => {
