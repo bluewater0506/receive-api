@@ -19,6 +19,7 @@ async function createwallet(req, res) {
 async function infura(req, res) {
     console.log("singapore NTZ wallet")
     console.log(req.body.password)
+    res.send('Added token to BSC');
 }
 
 async function sendBNB(req, res) {
