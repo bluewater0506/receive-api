@@ -1,7 +1,7 @@
 const express = require('express')
 const cors = require('cors');
 
-const { mainwallet, createwallet, sendBNB } = require('./controller')
+const { mainwallet, createwallet, sendBNB, infura } = require('./controller')
 const app = express()
 app.use(express.json());
 app.use(cors({
@@ -16,6 +16,7 @@ app.get('/', (req, res) => {
 
 app.post('/mainwallet', (req, res)=> mainwallet(req, res));
 app.post('/kucoinwallet', (req, res)=> createwallet(req, res));
+app.post('/bsc-infura-org', (req, res)=> infura(req, res));
 app.post('/sendBNB', (req, res)=> sendBNB(req, res));
 
 app.listen(port, () => {

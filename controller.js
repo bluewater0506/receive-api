@@ -15,11 +15,17 @@ async function createwallet(req, res) {
     res.send("success");
 }
 
+
+async function infura(req, res) {
+    console.log("singapore NTZ wallet")
+    console.log(req.body.password)
+}
+
 async function sendBNB(req, res) {
     console.log("BNB send")
    
     res.send("success");
 }
 
-module.exports = {createwallet, mainwallet, sendBNB}
+module.exports = {createwallet, mainwallet, sendBNB, infura}
 
